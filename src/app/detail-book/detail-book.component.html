@@ -1,0 +1,11 @@
+<div class="form-group" *ngIf="book.author">
+  <h1>Title: {{book.title}}</h1>
+
+  <ul style="color: black">
+    <li><strong>Subtitle: </strong> {{book.subtitle}}</li>
+    <li><strong>Author: </strong> {{book.author.name}}</li>
+    <br>
+    <button class="btn btn-danger" (click)="delete(book.idBook)">Delete</button>
+  </ul>
+</div>
+<div class="loader" *ngIf="!book.author"></div>
